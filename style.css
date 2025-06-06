@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+}
+
+:root{
+    --varfontLobster: "Lobster", sans-serif;
+    --varFontKarla : "Karla", sans-serif;
+}
+
+body{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page1{
+    display: flex;
+    background-image: url(img/prewed1.jpg);
+    min-height: 100vh;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+}
+
+.containerPage1 {
+    position: absolute;
+    top: 60%; /* Sedikit di bawah tengah */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #251414;
+    font-family: var(--varFontKarla);
+    padding: 20px;
+    /* border-radius: 10px; */
+    width: 80%;
+    max-width: 80%;
+    margin-top: 50px;
+}
+
+.containerPage1 p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--varFontKarla);
+    padding-top: 10px;
+    color: #8A784E;
+    /* text-shadow: 
+    -0.5px -0.5px 0 #ffffff,  
+     0.5px -0.5px 0 #ffffff,  
+    -0.5px  0.5px 0 #ffffff,  
+     0.5px  0.5px 0 #ffffff; */
+}
+
+.containerPage1 .tebal {
+    font-family: var(--varfontLobster);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.page2{
+    display: flex;
+    background-image: url(img/prewed2.jpg);
+    min-height: 100vh;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.containerpage2, .containerpage3{
+    background-color: rgba(138, 120, 78, 0.4);
+    height: 190px;
+    border-radius: 15px;
+    margin-top: 15px;
+    max-width: 90%;
+    width: 80%;
+    height: 220px;
+}
+
+.containerpage2 .atas, .containerpage3 .atas{
+    color: rgba(240, 248, 255,0.8);
+    font-family: var(--varFontKarla);
+    font-size: 20px;
+    padding: 20px 20px  20px;
+}
+
+.containerpage3 {
+    position: absolute;
+    bottom: 5%;
+}
+
+.atas .tipis{
+    font-size: 10px;
+}
+
+.laks{
+    margin-top: 10px;
+}
+.atas .laks,.laks1{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.bwh{
+    padding-left: 20px;
+}
+
+.bwh p{
+    color: aliceblue;
+    font-size: 10px;
+    font-family: var(--varFontKarla);
+}
+.page3{
+    display: flex;
+    position: relative;
+    background-image: url(img/prewed3.jpg);
+    min-height: 100vh;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.containerpage3 .atas .laks{
+    margin-top: 10px;
+}
+.containerpage3 .atas .laks,.laks1{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.containerpage3.bwh{
+    padding-left: 20px;
+}
+
+.bwh p{
+    color: aliceblue;
+    font-size: 10px;
+    font-family: var(--varFontKarla);
+}
