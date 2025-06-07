@@ -7,6 +7,8 @@
 :root{
     --varfontLobster: "Lobster", sans-serif;
     --varFontKarla : "Karla", sans-serif;
+    --varfont3: "Montserrat";
+    --varfont4 : "Monsieur La Doulaise", cursive;
 }
 
 body{
@@ -15,13 +17,38 @@ body{
   background-repeat: no-repeat;
 }
 
-.page1{
+.page1 {
     display: flex;
+    position: relative; /* penting untuk posisi pseudo-element */
     background-image: url(img/prewed1.jpg);
     min-height: 100vh;
+    flex-direction: column; /* supaya isi tersusun dari atas ke bawah */
+    padding: 2rem;
     background-size: cover;        
-    background-position: center;   
+    background-position: center; 
+    justify-content: center;  
     background-repeat: no-repeat;
+    z-index: 0; /* supaya pseudo-element bisa diatur posisinya */
+}
+
+.page1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* ubah warna dan tingkat transparansi sesuai keinginan */
+    z-index: 1;
+}
+
+/* isi halaman tetap terlihat di atas overlay */
+.page1 > * {
+    position: relative;
+    z-index: 2;
+}
+.back{
+    background-color: #251414;
 }
 
 .containerPage1 {
@@ -36,16 +63,17 @@ body{
     /* border-radius: 10px; */
     width: 80%;
     max-width: 80%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    bottom: 10px;
 }
 
 .containerPage1 p{
-    margin-top: 10px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 15px;
     font-weight: 400;
     font-family: var(--varFontKarla);
     padding-top: 10px;
-    color: #8A784E;
+    color: rgba(255, 255, 255,0.8);
     /* text-shadow: 
     -0.5px -0.5px 0 #ffffff,  
      0.5px -0.5px 0 #ffffff,  
@@ -54,15 +82,17 @@ body{
 }
 
 .containerPage1 .tebal {
-    font-family: var(--varfontLobster);
-    font-size: 20px;
+    font-family: var(--varfont3);
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .page2{
     display: flex;
-    background-image: url(img/prewed2.jpg);
+    position: relative;
+    z-index: 0;
+    background-image: url(img/prewed4.jpg);
     min-height: 100vh;
     background-size: cover;        
     background-position: center;   
@@ -70,7 +100,23 @@ body{
     justify-content: center;
 }
 
-.containerpage2, .containerpage3{
+.page2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
+    z-index: 1;
+}
+
+.page2 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.containerpage2{
     background-color: rgba(138, 120, 78, 0.4);
     height: 190px;
     border-radius: 15px;
@@ -78,10 +124,12 @@ body{
     max-width: 90%;
     width: 80%;
     height: 220px;
+    position: relative;
+    z-index: 1;
 }
 
 .containerpage2 .atas, .containerpage3 .atas{
-    color: rgba(240, 248, 255,0.8);
+    color: rgb(240, 248, 255);
     font-family: var(--varFontKarla);
     font-size: 20px;
     padding: 20px 20px  20px;
@@ -113,16 +161,46 @@ body{
     font-size: 10px;
     font-family: var(--varFontKarla);
 }
-.page3{
+.page3 {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Biar container ada di bawah */
+    align-items: center;
     position: relative;
     background-image: url(img/prewed3.jpg);
     min-height: 100vh;
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;
-    justify-content: center;
 }
+
+.page3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
+    z-index: 1;
+}
+
+.containerpage3 {
+    background-color: rgba(138, 120, 78, 0.4);
+    border-radius: 15px;
+    max-width: 90%;
+    width: 80%;
+    height: 220px;
+    position: relative;
+    z-index: 2; 
+    margin-bottom: 30px; 
+}
+
+.page3 > * {
+    position: relative;
+    z-index: 2;
+}
+
 
 .containerpage3 .atas .laks{
     margin-top: 10px;
@@ -140,4 +218,173 @@ body{
     color: aliceblue;
     font-size: 10px;
     font-family: var(--varFontKarla);
+}
+
+/* page 4 start */
+.page4{
+    display: flex;
+    position: relative;
+    z-index: 0;
+    background-image: url(img/prewed6.jpg);
+    min-height: 100vh;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.page4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
+    z-index: 1;
+}
+
+.page4 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.conteinerpage4{
+    background-color: rgba(138, 120, 78, 0.4);
+    height: 190px;
+    border-radius: 15px;
+    margin-top: 15px;
+    max-width: 90%;
+    width: 80%;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
+}
+
+.pag4atas {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 30px; /* jarak antar blok */
+    border-radius: 20px;
+    color: white;
+    height: 220px;
+}
+
+.pag4atas p{
+    font-family: var(--varFontKarla);
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.pag4atas .wedd{
+    font-family: var(--varfont4);
+    font-size: 35px;
+}
+
+.pag4atas .her{
+    margin-top: 5px;
+}
+
+.her .kcl{
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.her .tbl{
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.jln p{
+    margin-top: 15px;
+    font-size: 13px;
+    color: rgba(240, 248, 255, 0.8);
+}
+
+.pag4atas a {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  color: white;
+  text-decoration: underline;
+  padding-top: 10px;
+}
+
+
+.pag4bwh p{
+    font-family: var(--varFontKarla);
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/* page 5 start */
+
+.page5{
+    display: flex;
+    position: relative;
+    z-index: 0;
+    background-image: url(img/prewed3.jpg);
+    min-height: auto;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.page5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
+    z-index: 1;
+}
+
+.page5 > * {
+    position: relative;
+}
+
+.gallery-wrapper {
+  max-width: 1000px;
+  margin-top: 20px;
+  width: 80%;
+  min-height: 80%;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(240, 248, 255, 0.4), rgba(138, 120, 78, 0.4));
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-wrapper h2 {
+  font-size: 35px;
+  font-family: var(--varFontKarla);
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: rgba(240, 248, 255, 0.9);
+  
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.gallery-item {
+  aspect-ratio: 1 / 2;
+  overflow: hidden;
+  /* border-radius: 15px; */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  display: block;
 }
