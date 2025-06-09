@@ -9,6 +9,7 @@
     --varFontKarla : "Karla", sans-serif;
     --varfont3: "Montserrat";
     --varfont4 : "Monsieur La Doulaise", cursive;
+    /* --varfont5 : "Edu VIC WA NT Hand Pre"; */
 }
 
 body{
@@ -110,10 +111,32 @@ body{
     background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
     z-index: 1;
 }
+.fade-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+.fade-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .page2 > * {
     position: relative;
     z-index: 2;
+}
+
+.fade-slide-down,
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-slide-down.show,
+.fade-slide-up.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .containerpage2{
@@ -161,6 +184,11 @@ body{
     font-size: 10px;
     font-family: var(--varFontKarla);
 }
+
+
+/* animasi naik dari bawah */
+
+/* page3 */
 .page3 {
     display: flex;
     flex-direction: column;
@@ -257,12 +285,12 @@ body{
     max-width: 90%;
     width: 80%;
     height: 90vh;
-    position: relative;
+    /* position: relative; */
     z-index: 1;
 }
 
 .pag4atas {
-    position: relative;
+    /* position: relative; */
     padding: 20px;
     margin-bottom: 30px; /* jarak antar blok */
     border-radius: 20px;
@@ -354,14 +382,14 @@ body{
   text-align: center;
   color: white;
   border-radius: 10px;
-  background: linear-gradient(to bottom, rgba(240, 248, 255, 0.4), rgba(138, 120, 78, 0.4));
+  background-color: rgba(138, 120, 78, 0.4);
   position: relative;
   z-index: 1;
 }
 
 .gallery-wrapper h2 {
   font-size: 35px;
-  font-family: var(--varFontKarla);
+  font-family: var(--varfont5);
   margin-bottom: 15px;
   margin-top: 15px;
   color: rgba(240, 248, 255, 0.9);
@@ -388,3 +416,273 @@ body{
   object-fit: cover;
   display: block;
 }
+
+
+
+/* START PAGE 6 */
+.page6{
+    display: flex;
+    position: relative;
+    z-index: 0;
+    background-image: url(img/prewed3.jpg);
+    min-height: 100vh;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.page6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
+    z-index: 1;
+}
+
+.page6 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.containerpage6 {
+    background-color: rgba(138, 120, 78, 0.4);
+    border-radius: 15px;
+    max-width: 90%;
+    width: 80%;
+    height: 220px;
+    z-index: 2; 
+    margin-bottom: 30px; 
+    position: absolute;
+    bottom: 5%;
+}
+
+.containerpage6 .atas{
+    padding: 20px;
+    color: aliceblue;
+}
+
+.atas p{
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: var(--varFontKarla);
+    color: rgba(240, 248, 255,0.8);
+}
+
+.atas .tipis{
+    font-size: 25px;
+    font-family: var(--varfont5);
+    color: aliceblue;
+
+}
+
+.atas .copy-area{
+    margin-top: 30px;
+}
+
+    .copy-container {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    select {
+      padding: 10px;
+      border: 0.5px solid rgba(255, 255, 255, 0.6);
+      /* border-radius: 6px; */
+      font-size: 12px;
+      width: 250px;
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    button {
+      background-color: #181613;
+      border: none;
+      padding: 10px 20px;
+      /* border-radius: 6px; */
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4e4a45;
+    }
+
+
+/* start page 7 */
+    .page7{
+    display: flex;
+    position: relative;
+    z-index: 0;
+    background-image: url(img/prewed3.jpg);
+    min-height: 100vh;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.page7::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
+    z-index: 1;
+}
+
+.page7 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.conteinerpage7{
+    background-color: rgba(138, 120, 78, 0.4);
+    height: 190px;
+    border-radius: 15px;
+    margin-top: 15px;
+    max-width: 90%;
+    width: 80%;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
+}
+
+.conteinerpage7 .jshdn{
+    padding: 20px;
+    color: aliceblue;
+}
+
+.jshdn .jsksi{
+    font-family: var(--varfont5);
+    font-size: 35px;
+    color: rgba(240, 248, 255,0.9);
+    /* font-weight: 600; */
+}
+
+.jshdn .jdyana{
+    margin-top: 20px;
+    color: rgba(240, 248, 255,0.8);
+    font-family: var(--varfont3);
+    font-size: 15px;
+}
+
+.jshdn .inputan{
+    margin-top: 20px;
+}
+
+.inputan .inpt{
+    min-width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 10px; /* buat agak ke kanan */
+    border: none;
+    outline: none;
+}
+
+    .krim {
+      background-color: rgb(24, 22, 19);
+      border: none;
+      padding: 10px 20px;
+      /* border-radius: 6px; */
+      font-size: 13px;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.8);
+      transition: background-color 0.3s ease;
+    }
+
+    .krim:hover {
+      background-color: #4e4a45;
+    }
+
+.jahdka{
+    justify-content: center;
+    padding: 20px;
+}
+
+.jahdka .dksj{
+    background-color: rgba(240, 248, 255, 0.3);
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.dksj p{
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--varfont3);
+    font-size: 13px;
+}
+
+
+/* page 8 start */
+
+   .page8{
+    display: flex;
+    position: relative;
+    z-index: 0;
+    background-image: url(img/prewed4.jpg);
+    min-height: 50vh;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.page8::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* warna overlay transparan */
+    z-index: 1;
+}
+
+.page8 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.conteinerpage8{
+    background-color: rgba(138, 120, 78, 0.4);
+    height: 190px;
+    border-radius: 15px;
+    margin-top: 15px;
+    max-width: 90%;
+    width: 80%;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+
+.heropage8{
+    justify-content: center;
+    text-align: center;
+}
+
+.heropage8 p{
+    color: rgba(240, 248, 255, 0.8);
+    font-family: var(--varfont3);
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.heropage8 .jdyadd{
+    font-family: var(--varfont5);
+    font-size: 40px;
+}
+
