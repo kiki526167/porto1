@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.3 // bisa disesuaikan, ini artinya 30% elemen terlihat
+      threshold: 0.8 // bisa disesuaikan, ini artinya 80% elemen terlihat
     });
 
     // elemen-elemen yang mau diamati
